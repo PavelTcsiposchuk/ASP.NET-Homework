@@ -7,9 +7,13 @@ namespace ASP.NET_Homework.Models
 {
     public class Task
     {
-        int ID { get; set; }
-        bool Finished { get; set; }
-        string Body { get; set; }
+        public int ID { get; set; }
+        public bool Finished { get; set; }
+        public string Text { get; set; }
+        public string IsFinished()
+        {
+            return (this.Finished == true) ? "Сделано" : "В процессе";
+        }
 
 
     
